@@ -2,9 +2,8 @@
 var experiences = [];
 
 function Experience (opts) {
-  this.company = opts.company;
-  this.positionName = opts.positionName;
-  this.city = opts.city;
+  this.project = opts.project;
+  this.inistitue = opts.inistitue;
   this.date = opts.date;
   this.description = opts.description;
 }
@@ -12,12 +11,13 @@ function Experience (opts) {
 Experience.prototype.toHtml = function() {
   var $newExperience = $('article.template').clone();
 
-  $newExperience.find('h5:first-child').text(this.company);
-  $newExperience.find('h5:nth-child(2)').text(this.positionName);
+  $newExperience.find('h5:first-child').text(this.project);
+  $newExperience.find('h5:nth-child(2)').text(this.inistitue);
   $newExperience.find('p:nth-child(3)').text(this.city +', '+ this.date);
   $newExperience.find('p:nth-child(4)').text(this.description);
 
   $('#articles').append($newExperience);
+  $newExperience.append('<hr/>');
   $newExperience.removeClass('template');
   return $newExperience;
 };
