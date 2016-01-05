@@ -1,0 +1,23 @@
+.jumbotron,footer{
+  background-color: #2E5495;
+  color: white;
+  font-family: 'Vollkorn', serif;
+}
+footer a{
+  color:white;
+}
+
+.profile{
+  border:1px solid black;
+  text-align: justify;
+  background-color:	#F3F3F3;
+}
+.imgProfile{
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+span{
+  color:#8CAEB7;
+}
