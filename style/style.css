@@ -64,4 +64,5 @@ ul#tab-text {
 img{
   float: left;
   margin-right: 2%;
+  max-width: 100%;  // responsive image base on parent size
 }
