@@ -1,5 +1,10 @@
+header h1 {
+  margin-top: 3%;
+  font-family: 'Courgette', cursive;
+  color: #B55109;
+}
 footer{
-  background-color: #2E5495;
+  background-color: #22B2A5;
   color: white;
   font-family: 'Vollkorn', serif;
   clear: both;
@@ -10,17 +15,7 @@ footer a{
 footer a:hover{
   color:#FF4500;
 }
-.profile{
-  border:1px solid black;
-  text-align: justify;
-  background-color:	#F3F3F3;
-}
-.imgProfile{
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
+
 span{
   color:#8CAEB7;
 }
@@ -49,6 +44,7 @@ ul#tab-text {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  background-color: white;
 }
 
   ul#tab-text li {
@@ -61,3 +57,7 @@ ul#tab-text {
       margin-bottom: 30px;
       padding-bottom: 5px;
       border-bottom: solid 5px #32c896; }
+img{
+  float: left;
+  margin-right: 2%;
+}

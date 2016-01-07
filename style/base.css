@@ -48,7 +48,7 @@ a img {
   box-sizing: border-box; }
 
 body {
-  background-color: #32c896;
+  background-color: #22B2A5;
   color: #505050;
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
@@ -79,62 +79,11 @@ a:hover {
   margin: 0 auto;
   padding: 0 30px; }
 
-/* =Top Bar
--------------------------------------------------------------- */
-#top-bar {
-  background-color: #289f77; }
-
-#top-bar a {
-  color: white;
-  font-size: 14px;
-  text-transform: uppercase;
-  display: inline-block;
-  margin: 0;
-  padding: 10px; }
-
-#top-bar a:hover {
-  background-color: #238b68; }
-
-span.all-labs,
-span.back-to-tutorial {
-  display: block;
-  width: 50%; }
-
-span.all-labs {
-  float: left;
-  text-align: left; }
-
-span.back-to-tutorial {
-  float: right;
-  text-align: right; }
 
 /* =Header
 -------------------------------------------------------------- */
 header {
   padding: 30px 0; }
-
-#title {
-  text-align: center; }
-
-#title h1 {
-  color: #fff;
-  font-size: 30px;
-  margin-bottom: 10px; }
-
-#title h2 {
-  color: #95e5ca;
-  font-size: 20px; }
-
-/* =Footer
--------------------------------------------------------------- */
-/* =Extras
--------------------------------------------------------------- */
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  content: "";
-  clear: both;
-  height: 0; }
 
 /* =Media Queries
 -------------------------------------------------------------- */
