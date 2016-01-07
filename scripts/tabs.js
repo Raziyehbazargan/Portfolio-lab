@@ -23,6 +23,11 @@ $(function(){
         $('ul#tab-text li').not('.resume').hide();
         break;
       }
+      case 'Contact':{
+        $('ul#tab-text li.contact').show();
+        $('ul#tab-text li').not('.contact').hide();
+        break;
+      }
       default:$('ul#tabs li.aboutMe').show();
       }
     }

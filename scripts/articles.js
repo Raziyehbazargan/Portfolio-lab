@@ -11,10 +11,9 @@ function Experience (opts) {
 Experience.prototype.toHtml = function() {
   var $newExperience = $('li article.template').clone();
 
-  $newExperience.find('h5:first-child').text(this.project);
-  $newExperience.find('h5:nth-child(2)').text(this.inistitue);
-  $newExperience.find('p:nth-child(3)').text(this.date);
-  $newExperience.find('p:nth-child(4)').text(this.description);
+  $newExperience.find('h5:first-child').html('<b>' + this.project + '</b>');
+  $newExperience.find('h5:nth-child(2)').text(this.inistitue + ' - ' + this.date);
+  $newExperience.find('p:nth-child(3)').text(this.description);
 
   $('#articles').append($newExperience);
   $newExperience.append('<hr/>');
@@ -29,3 +28,4 @@ rawData.forEach(function(ele) {
 experiences.forEach(function(a){
   $('#articles').append(a.toHtml());
 });
+$('article.template').hide();
