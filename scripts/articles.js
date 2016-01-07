@@ -9,11 +9,11 @@ function Experience (opts) {
 }
 
 Experience.prototype.toHtml = function() {
-  var $newExperience = $('article.template').clone();
+  var $newExperience = $('li article.template').clone();
 
   $newExperience.find('h5:first-child').text(this.project);
   $newExperience.find('h5:nth-child(2)').text(this.inistitue);
-  $newExperience.find('p:nth-child(3)').text(this.city +', '+ this.date);
+  $newExperience.find('p:nth-child(3)').text(this.date);
   $newExperience.find('p:nth-child(4)').text(this.description);
 
   $('#articles').append($newExperience);
