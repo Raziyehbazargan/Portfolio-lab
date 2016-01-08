@@ -93,21 +93,4 @@ header {
 
   #top-bar a {
     display: block; }
-
-  span.all-labs,
-  span.back-to-tutorial {
-    width: 100%; }
-
-  span.all-labs,
-  span.back-to-tutorial {
-    float: none;
-    text-align: center; }
-
-  span.all-labs {
-    border-bottom: solid 1px #238b68; }
-
-  #title h1 {
-    font-size: 20px; }
-
-  #title h2 {
-    font-size: 16px; } }
+  }
