@@ -26,7 +26,8 @@ ul#tabs {
   list-style-type: none;
   margin: 0 0 30px 0;
   padding: 0;
-  text-align: center; }
+  text-align: center;
+}
   ul#tabs li {
     display: inline-block;
     background-color: #32c896;
@@ -34,11 +35,14 @@ ul#tabs {
     padding: 5px 20px;
     margin-bottom: 4px;
     color: #fff;
-    cursor: pointer; }
+    cursor: pointer;
+  }
     ul#tabs li:hover {
-      background-color: #238b68; }
+      background-color: #238b68;
+     }
     ul#tabs li.active {
-      background-color: #238b68; }
+      background-color: #238b68;
+    }
 
 ul#tab-text {
   list-style-type: none;
@@ -60,4 +64,5 @@ ul#tab-text {
 img{
   float: left;
   margin-right: 2%;
+  max-width: 100%;  // responsive image base on parent size
 }
