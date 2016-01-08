@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width" initial-scale="1.0"/>
     <title></title>
     <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="vendor/style/reset.css" />
     <link rel="stylesheet" href="style/base.css" />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="vendor/style/normalize.css" />
+    <link rel="stylesheet" href="style/modules.css" />
+
 
     <!-- using handelbars library  and put the place holders like {{date}}-->
     <script id="projectDate" type="text/x-handlebars-template">
      <section id="articles-template">
       <article class="template" data-category="cat">
-        <h5>{{project}}</h5>
-        <h5><span>{{inistitue}} + {{date}}<span></h5>
+        <h5><b>{{project}}</b></h5>
+        <h5><span>{{inistitue}} - {{date}}<span></h5>
         <p>{{description}}</p>
       </article>
      </section>
@@ -38,13 +41,14 @@
             <h2><img src="img/rozi.jpg" class="imgProfile" alt=""/>About Me</h2>
             <p>I'm currently student at Code Fellows. I enjoy building software for users and other developers.
             after course 301, I want to seek a job as entry-level or intership to Improve my skills.
-            and after a while I will apply for Course 401 - javascript. Personally I'm intersted in Front End  Web Development.
+            and after a while I will apply for Course 401 - javascript.
+            Personally I'm intersted in Front End  Web Development.
             </p>
           </li>
           <li class="portfolio">
             <h2>Projects in Course 201</h2>
             <p></p>
-            
+
             <!-- using jQuery  to show data -->
             <!-- <section id="articles-template">
               <article class="template" data-category="cat">

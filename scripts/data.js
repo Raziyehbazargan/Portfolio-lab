@@ -3,24 +3,24 @@ var rawData = [
     project:       'Bike Tracks',
     inistitue:     'Code Fellows',
     date:          '2015',
-    description:   'Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. .'
+    description:   'The Final Project in Course 201'
   },
   {
-    project:       'market-analysis-app',
+    project:       'Market-analysis-app',
     inistitue:     'Code Fellows',
     date:          '2015',
-    description:   'Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. .'
+    description:   'The third Project in Course 201'
   },
   {
-    project:       'cookie-stand',
+    project:       'Cookie-stand',
     inistitue:     'Code Fellows',
     date:          '2015',
-    description:   'Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. .'
+    description:   'The Secound Project in Course 201'
   },
   {
-    project:       'guessing-game',
+    project:       'Guessing-game',
     inistitue:     'Code Fellows',
     date:          '2015',
-    description:   'Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. .'
+    description:   'The First Project in Course 201'
   }
 ];
