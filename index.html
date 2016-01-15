@@ -28,16 +28,17 @@
         <h1>Raziyeh Bazargan</h1>
         <h4>Front End web developer</h4>
     </header>
+    <nav class="main-nav">
+      <ul>
+        <li class="tab active" data-content="aboutMe">About Me</li>
+        <li class="tab" data-content="portfolio">Portfolio</li>
+        <li class="tab" data-content="resume">Resume</li>
+        <li class="tab" data-content="contact">Contact</li>
+      </ul>
+    </nav>
     <main class="container">
-        <ul id="tabs">
-          <li class="active">About Me</li>
-          <li>Portfolio</li>
-          <li>Resume</li>
-          <li>Contact</li>
-          <li>Talks</li>
-        </ul>
         <ul id="tab-text">
-          <li class="aboutMe">
+          <li class="box">
             <h2><img src="img/rozi.jpg" class="imgProfile" alt=""/>About Me</h2>
             <p>I'm currently student at Code Fellows. I enjoy building software for users and other developers.
             after course 301, I want to seek a job as entry-level or intership to Improve my skills.
@@ -45,25 +46,15 @@
             Personally I'm intersted in Front End  Web Development.
             </p>
           </li>
-          <li class="portfolio">
+          <li class="box">
             <h2>Projects in Course 201</h2>
             <p></p>
-
-            <!-- using jQuery  to show data -->
-            <!-- <section id="articles-template">
-              <article class="template" data-category="cat">
-                <h5>project Name</h5>
-                <h5><span>Inistitue + date<span></h5>
-                <p>description</p>
-              </article>
-            </section> -->
-
           </li>
-          <li class="resume">
+          <li class="box">
             <h2>Resume</h2>
             .......... nothing yet
           </li>
-          <li class="contact">
+          <li class="box">
             <h2>Contact - not complete yet</h2>
             <p>Phone:(425)-598-5126</p>
             <a  href="https://www.linkedin.com/in/raziyehbazargan">Linkedin:www.linkedin.com/in/raziyehbazargan</a>
@@ -76,6 +67,5 @@
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script type="text/javascript" src="scripts/data.js"></script>
     <script type="text/javascript" src="scripts/articles.js"></script>
-    <script type="text/javascript" src="scripts/tabs.js"></script>
   </body>
 </html>

@@ -25,8 +25,6 @@ Experience.prototype.toHtml = function() {
     'description': this.description,
   };
   console.log(content);
-
-
   var compileHtml = handlebarsScript(content);
   console.log(compileHtml);
   // $newExperience.find('h5:first-child').html('<b>' + this.project + '</b>');
@@ -40,6 +38,17 @@ Experience.prototype.toHtml = function() {
   return compileHtml;
 };
 
+Experience.tabPage = function() {
+  $('.main-nav').on('click' , '.tab' , function(){
+    if (!$(this).hasClass('active')){
+      $('.main-nav li.active').removeClass('active');
+      $(this).addClass('active');
+    }
+    $('.box').hide().eq($(this).index()).show();
+  });
+  $('.main-nav .tab:first').click();
+};
+
 rawData.forEach(function(ele) {
   experiences.push(new Experience(ele));
 });
@@ -47,4 +56,7 @@ rawData.forEach(function(ele) {
 experiences.forEach(function(a){
   $('li.portfolio').append(a.toHtml());
 });
-// $('article.template').hide();
+
+$(document).ready(function(){
+  Experience.tabPage();
+});
