@@ -30,11 +30,10 @@ Experience.prototype.toHtml = function() {
 
 Experience.tabPage = function() {
   $('.main-nav').on('click' , '.tab' , function(){
-    if (!$(this).hasClass('active')){
-      $('.main-nav li.active').removeClass('active');
-      $(this).addClass('active');
-    }
-    $('.box').hide().eq($(this).index()).show();
+    $('.main-nav li').removeClass('active');
+    $(this).addClass('active');
+    $('.box').hide();
+    $('#' + $(this).data('content')).show();
   });
   $('.main-nav .tab:first').click();
 };
