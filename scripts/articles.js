@@ -1,33 +1,66 @@
 
-var experiences = [];
 
 function Experience (opts) {
   this.project = opts.project;
-  this.inistitue = opts.inistitue;
+  this.institute = opts.institute;
   this.date = opts.date;
   this.description = opts.description;
 }
 
+Experience.all=[];
+
 Experience.prototype.toHtml = function() {
-  var $newExperience = $('li article.template').clone();
   var htmlScript = $('#projectDate').html();
-  // console.log(htmlScript);
-
   var handlebarsScript = Handlebars.compile(htmlScript);
-  // console.log(handlebarsScript);
-
   var content = {
     'project': this.project,
-    'inistitue': this.inistitue,
+    'institute': this.institute,
     'date': this.date,
     'description': this.description,
   };
-  // console.log(content);
   var compileHtml = handlebarsScript(content);
-  // console.log(compileHtml);
   return compileHtml;
 };
 
+Experience.loadAll = function(rawData) {
+  rawData.forEach(function(ele) {
+    Experience.all.push(new Experience(ele));
+  });
+};
+
+Experience.getAll = function(){
+  $.getJSON('data/data.json',function(rawData){
+    Experience.loadAll(rawData);
+    localStorage.rawData = JSON.stringify(rawData);
+    articleView.initIndexPage();
+  });
+};
+
+// This function will retrieve the data from either a local or remote source,
+// and process it, then hand off control to the View.
+Experience.fetchAll = function() {
+  if (localStorage.rawData) {
+    $.ajax({   //loking for JSON object
+      type: 'HEAD',  //because we just head of data and dont use get because get get all content of data
+      url:'/data/data.json',
+      success:function(data,message,xhr){
+        console.log(xhr);
+        var eTag = xhr.getResponseHeader('eTag');
+        console.log(eTag);
+        if(!localStorage.eTag || localStorage.eTag !== eTag ){// !localStorage.eTag  -->if eTag doesn;t exist
+          localStorage.eTag = eTag;
+          Experience.getAll();
+        }else {
+          console.log('here 3');
+          Experience.loadAll(JSON.parse(localStorage.rawData));
+          articleView.initIndexPage();
+        }
+      }
+    });
+  }else {
+    Experience.getAll();
+  }
+};
 Experience.tabPage = function() {
   $('.main-nav').on('click' , '.tab' , function(){
     $('.main-nav li').removeClass('active');
@@ -38,37 +71,7 @@ Experience.tabPage = function() {
   $('.main-nav .tab:first').click();
 };
 
-rawData.forEach(function(ele) {
-  experiences.push(new Experience(ele));
-});
-
-experiences.forEach(function(a){
-  $('li#portfolio').append(a.toHtml());
-});
-
-
-// function loadJsonContactData(){
-//   var htmlEmailLink = '<a href=';
-//   var htmlGithubLink = '<a href=';
-//   var htmllinkeDinLink = '<a href=';
-//   var htmlFacebookLink = '<a href=';
-//   $.getJSON('scripts/contact.json',function(response) {
-//     var $list = $('#contact');
-//     $.each(response,function(index , contactInf) {
-//       htmlEmailLink += '"' + contactInf.email + '"' + '>email</a><br>';
-//       htmlGithubLink += '"' + contactInf.github + '"' + '>github</a><br>';
-//       htmllinkeDinLink += '"' + contactInf.linkedin + '"' + '>linkedin</a><br>';
-//       htmlFacebookLink += '"' + contactInf.facebook + '"' + '>facebook</a><br>';
-//     });
-//
-//     $list.html(htmlEmailLink);
-//     // $list.html(htmlGithubLink);
-//     // $list.html(htmllinkeDinLink);
-//     // $list.html(htmlFacebookLink);
-//   });
-// };
-
 $(function(){
   Experience.tabPage();
-  // loadJsonContactData();
+  Experience.fetchAll();
 });
