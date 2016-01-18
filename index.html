@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width" initial-scale="1.0"/>
     <title></title>
     <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="vendor/style/reset.css" />
     <link rel="stylesheet" href="style/base.css" />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="vendor/style/normalize.css" />
+    <link rel="stylesheet" href="style/modules.css" />
+
 
     <!-- using handelbars library  and put the place holders like {{date}}-->
     <script id="projectDate" type="text/x-handlebars-template">
      <section id="articles-template">
       <article class="template" data-category="cat">
-        <h5>{{project}}</h5>
-        <h5><span>{{inistitue}} + {{date}}<span></h5>
+        <h5><b>{{project}}</b></h5>
+        <h5><span>{{inistitue}} - {{date}}<span></h5>
         <p>{{description}}</p>
       </article>
      </section>
@@ -25,53 +28,41 @@
         <h1>Raziyeh Bazargan</h1>
         <h4>Front End web developer</h4>
     </header>
+    <nav class="main-nav">
+      <ul>
+        <li class="tab active" data-content="aboutMe">About Me</li>
+        <li class="tab" data-content="portfolio">Portfolio</li>
+        <li class="tab" data-content="resume">Resume</li>
+        <li class="tab" data-content="contact">Contact</li>
+      </ul>
+    </nav>
     <main class="container">
-        <ul id="tabs">
-          <li class="active">About Me</li>
-          <li>Portfolio</li>
-          <li>Resume</li>
-          <li>Contact</li>
-          <li>Talks</li>
-        </ul>
         <ul id="tab-text">
-          <li class="aboutMe">
+          <li class="box" id="aboutMe">
             <h2><img src="img/rozi.jpg" class="imgProfile" alt=""/>About Me</h2>
             <p>I'm currently student at Code Fellows. I enjoy building software for users and other developers.
             after course 301, I want to seek a job as entry-level or intership to Improve my skills.
-            and after a while I will apply for Course 401 - javascript. Personally I'm intersted in Front End  Web Development.
+            and after a while I will apply for Course 401 - javascript.
+            Personally I'm intersted in Front End  Web Development.
             </p>
           </li>
-          <li class="portfolio">
+          <li class="box" id="portfolio">
             <h2>Projects in Course 201</h2>
-            <p></p>
-            
-            <!-- using jQuery  to show data -->
-            <!-- <section id="articles-template">
-              <article class="template" data-category="cat">
-                <h5>project Name</h5>
-                <h5><span>Inistitue + date<span></h5>
-                <p>description</p>
-              </article>
-            </section> -->
-
+            <p id="description"></p>
           </li>
-          <li class="resume">
+          <li class="box" id="resume">
             <h2>Resume</h2>
             .......... nothing yet
           </li>
-          <li class="contact">
-            <h2>Contact - not complete yet</h2>
-            <p>Phone:(425)-598-5126</p>
-            <a  href="https://www.linkedin.com/in/raziyehbazargan">Linkedin:www.linkedin.com/in/raziyehbazargan</a>
-            <a href="https://github.com/Raziyehbazargan">GitHub</a>
+          <li class="box" id="contact">
+            <h2>Contact Information</h2>
           </li>
         </ul>
     </main>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
-    <!--Include Handlebars.JS from a CDN -->
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-    <script type="text/javascript" src="scripts/data.js"></script>
+    <script type="text/javascript" src="data/data.json"></script>
     <script type="text/javascript" src="scripts/articles.js"></script>
-    <script type="text/javascript" src="scripts/tabs.js"></script>
+    <script type="text/javascript" src="scripts/articleView.js"></script>
   </body>
 </html>

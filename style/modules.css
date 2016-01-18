@@ -22,13 +22,13 @@ span{
 footer{
   padding: 30px;
 }
-ul#tabs {
+nav ul {
   list-style-type: none;
   margin: 0 0 30px 0;
   padding: 0;
   text-align: center;
 }
-  ul#tabs li {
+  nav ul li {
     display: inline-block;
     background-color: #32c896;
     border-bottom: solid 5px #238b68;
@@ -37,10 +37,10 @@ ul#tabs {
     color: #fff;
     cursor: pointer;
   }
-    ul#tabs li:hover {
+    nav ul li:hover {
       background-color: #238b68;
      }
-    ul#tabs li.active {
+    nav  li.active {
       background-color: #238b68;
     }
 
@@ -54,13 +54,18 @@ ul#tab-text {
   ul#tab-text li {
     padding: 30px;
     border: solid 20px #d2f4e9;
+    border-bottom:solid 60px #d2f4e9;
    }
 
     ul#tab-text li h2 {
       font-weight: 400;
       margin-bottom: 30px;
       padding-bottom: 5px;
-      border-bottom: solid 5px #32c896; }
+      border-bottom: solid 5px #32c896;
+     }
+     ul#tab-text li p{
+       margin-bottom: 5%;
+     }
 img{
   float: left;
   margin-right: 2%;
