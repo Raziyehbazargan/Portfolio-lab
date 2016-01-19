@@ -44,30 +44,41 @@ nav ul {
       background-color: #238b68;
     }
 
-ul#tab-text {
+#tab-text {
   list-style-type: none;
   margin: 0;
   padding: 0;
   background-color: white;
 }
 
-  ul#tab-text li {
+  #tab-text  {
     padding: 30px;
     border: solid 20px #d2f4e9;
-    border-bottom:solid 60px #d2f4e9;
+    /*border-bottom:solid 60px #d2f4e9;*/
    }
 
-    ul#tab-text li h2 {
+    #tab-text  h2 {
       font-weight: 400;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       padding-bottom: 5px;
       border-bottom: solid 5px #32c896;
      }
-     ul#tab-text li p{
+     #tab-text  p{
        margin-bottom: 5%;
      }
 img{
   float: left;
   margin-right: 2%;
   max-width: 100%;  // responsive image base on parent size
+}
+.box{
+  background: white;
+  /*max-width: 720px;*/
+}
+footer{
+  background: #d2f4e9;
+}
+footer img{
+  width: 30px;
+  /*padding: 7.5px 12px 0 0*/
 }
