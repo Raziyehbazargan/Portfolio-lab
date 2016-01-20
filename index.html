@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="vendor/style/reset.css" />
     <link rel="stylesheet" href="style/base.css" />
     <link rel="stylesheet" href="vendor/style/normalize.css" />
+    <link rel="stylesheet" href="style/layout.css" />
     <link rel="stylesheet" href="style/modules.css" />
 
 
@@ -16,7 +17,7 @@
      <section id="articles-template">
       <article class="template" data-category="cat">
         <h5><b>{{project}}</b></h5>
-        <h5><span>{{inistitue}} - {{date}}<span></h5>
+        <h5><span>{{institute}} - {{date}}<span></h5>
         <p>{{description}}</p>
       </article>
      </section>
@@ -30,39 +31,47 @@
     </header>
     <nav class="main-nav">
       <ul>
-        <li class="tab active" data-content="aboutMe">About Me</li>
-        <li class="tab" data-content="portfolio">Portfolio</li>
-        <li class="tab" data-content="resume">Resume</li>
-        <li class="tab" data-content="contact">Contact</li>
+        <!-- for use single page we should use a href and for example /portfolio -->
+        <li class="tab active" data-content="aboutMe"><a href='/aboutMe'>About Me</a></li>
+        <li class="tab" data-content="portfolio"><a href='/portfolio'>Portfolio</a></li>
+        <li class="tab" data-content="resume"><a href='/resume'>Resume</a></li>
+        <li class="tab" data-content="contact"><a href='/contact'>Contact</a></li>
       </ul>
     </nav>
     <main class="container">
-        <ul id="tab-text">
-          <li class="box" id="aboutMe">
-            <h2><img src="img/rozi.jpg" class="imgProfile" alt=""/>About Me</h2>
-            <p>I'm currently student at Code Fellows. I enjoy building software for users and other developers.
-            after course 301, I want to seek a job as entry-level or intership to Improve my skills.
-            and after a while I will apply for Course 401 - javascript.
-            Personally I'm intersted in Front End  Web Development.
-            </p>
-          </li>
-          <li class="box" id="portfolio">
-            <h2>Projects in Course 201</h2>
-            <p id="description"></p>
-          </li>
-          <li class="box" id="resume">
-            <h2>Resume</h2>
-            .......... nothing yet
-          </li>
-          <li class="box" id="contact">
-            <h2>Contact Information</h2>
-          </li>
-        </ul>
+      <article id="tab-text">
+        <section class="box" id="aboutMe">
+          <h2><img src="img/rozi.jpg" class="imgProfile" alt=""/>About Me</h2>
+          <p>I'm currently student at Code Fellows. I enjoy building software for users and other developers.
+          after course 301, I want to seek a job as entry-level or intership to Improve my skills.
+          and after a while I will apply for Course 401 - javascript.
+          Personally I'm intersted in Front End  Web Development.
+          </p>
+        </section>
+        <section class="box" id="portfolio">
+          <h2>Projects in Course 201</h2>
+          <p id="description"></p>
+        </section>
+        <section class="box" id="resume">
+          <h2>Resume</h2>
+        </section>
+        <section class="box" id="contact">
+          <h2>Contact Information</h2>
+        </section>
+      </article>
+      <footer>
+      </footer>
     </main>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-    <script type="text/javascript" src="data/data.json"></script>
-    <script type="text/javascript" src="scripts/articles.js"></script>
-    <script type="text/javascript" src="scripts/articleView.js"></script>
+    <script src="data/data.json"></script>
+    <script src="vendor/scripts/page.js"></script>
+    <script src="scripts/articles.js"></script>
+    <script src="scripts/articleView.js"></script>
+    <script src="scripts/indexController.js"></script>
+    <script src="scripts/portfolioController.js"></script>
+    <script src="scripts/resumeController.js"></script>
+    <script src="scripts/contactController.js"></script>
+    <script src="scripts/routes.js"></script>
   </body>
 </html>

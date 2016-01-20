@@ -51,7 +51,6 @@ Experience.fetchAll = function() {
           localStorage.eTag = eTag;
           Experience.getAll();
         }else {
-          console.log('here 3');
           Experience.loadAll(JSON.parse(localStorage.rawData));
           articleView.initIndexPage();
         }
@@ -61,17 +60,17 @@ Experience.fetchAll = function() {
     Experience.getAll();
   }
 };
-Experience.tabPage = function() {
-  $('.main-nav').on('click' , '.tab' , function(){
-    $('.main-nav li').removeClass('active');
-    $(this).addClass('active');
-    $('.box').hide();
-    $('#' + $(this).data('content')).slideDown('slow');
-  });
-  $('.main-nav .tab:first').click();
-};
+// Experience.tabPage = function() {
+//   $('.main-nav').on('click' , '.tab' , function(){
+//     $('.main-nav li').removeClass('active');
+//     $(this).addClass('active');
+//     $('.box').hide();
+//     $('#' + $(this).data('content')).slideDown('slow');
+//   });
+//   $('.main-nav .tab:first').click();
+// };
 
 $(function(){
-  Experience.tabPage();
+  // Experience.tabPage();
   Experience.fetchAll();
 });
