@@ -29,11 +29,11 @@
         <h4>Front End web developer</h4>
     </header>
     <nav class="main-nav">
-      <ul>
-        <li class="tab active" data-content="aboutMe">About Me</li>
-        <li class="tab" data-content="portfolio">Portfolio</li>
-        <li class="tab" data-content="resume">Resume</li>
-        <li class="tab" data-content="contact">Contact</li>
+      <!-- <ul>  for use single page we should use a href and for example /portfolio -->
+        <li class="tab active" data-content="aboutMe"><a href='/aboutMe'>About Me</a></li>
+        <li class="tab" data-content="portfolio"><a href='/portfolio'>Portfolio</a></li>
+        <li class="tab" data-content="resume"><a href='/resume'>Resume</a></li>
+        <li class="tab" data-content="contact"><a href='/contact'>Contact</a></li>
       </ul>
     </nav>
     <main class="container">
@@ -58,18 +58,16 @@
         </section>
       </article>
       <footer>
-        <ul>
-          <li><a href="#"><img src="/img/googlePlus.png" alt="" /></a></li>
-          <li><a href="#"><img src="/img/googlePlus.png" alt="" /></a></li>
-          <li><a href="#"><img src="/img/googlePlus.png" alt="" /></a></li>
-          <li><a href="#"><img src="/img/googlePlus.png" alt="" /></a></li>
-        </ul>
       </footer>
     </main>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-    <script type="text/javascript" src="data/data.json"></script>
-    <script type="text/javascript" src="scripts/articles.js"></script>
-    <script type="text/javascript" src="scripts/articleView.js"></script>
+    <script src="data/data.json"></script>
+    <script src="vendor/scripts/page.js"></script>
+    <script src="scripts/articles.js"></script>
+    <script src="scripts/articleView.js"></script>
+    <script src="scripts/indexController.js"></script>
+    <script src="scripts/portfolioController.js"></script>
+    <script src="scripts/routes.js"></script>
   </body>
 </html>
