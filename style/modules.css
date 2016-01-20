@@ -1,48 +1,3 @@
-header h1 {
-  margin-top: 3%;
-  font-family: 'Courgette', cursive;
-  color: #B55109;
-}
-footer{
-  background-color: #22B2A5;
-  color: white;
-  font-family: 'Vollkorn', serif;
-  clear: both;
-}
-footer a{
-  color:white;
-}
-footer a:hover{
-  color:#FF4500;
-}
-
-span{
-  color:#8CAEB7;
-}
-footer{
-  padding: 30px;
-}
-nav ul {
-  list-style-type: none;
-  margin: 0 0 30px 0;
-  padding: 0;
-  text-align: center;
-}
-  nav ul li {
-    display: inline-block;
-    background-color: #32c896;
-    border-bottom: solid 5px #238b68;
-    padding: 5px 20px;
-    margin-bottom: 4px;
-    color: #fff;
-    cursor: pointer;
-  }
-    nav ul li:hover {
-      background-color: #238b68;
-     }
-    nav  li.active {
-      background-color: #238b68;
-    }
 
 #tab-text {
   list-style-type: none;
@@ -51,34 +6,28 @@ nav ul {
   background-color: white;
 }
 
-  #tab-text  {
-    padding: 30px;
-    border: solid 20px #d2f4e9;
-    /*border-bottom:solid 60px #d2f4e9;*/
-   }
+#tab-text  {
+  padding: 30px;
+  border: solid 20px #d2f4e9;
+ }
 
-    #tab-text  h2 {
-      font-weight: 400;
-      margin-bottom: 20px;
-      padding-bottom: 5px;
-      border-bottom: solid 5px #32c896;
-     }
-     #tab-text  p{
-       margin-bottom: 5%;
-     }
-img{
+#tab-text  h2 {
+  font-weight: 400;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border-bottom: solid 5px #32c896;
+ }
+
+ #tab-text  p {
+   margin-bottom: 5%;
+ }
+
+img {
   float: left;
   margin-right: 2%;
   max-width: 100%;  // responsive image base on parent size
 }
+
 .box{
   background: white;
-  /*max-width: 720px;*/
-}
-footer{
-  background: #d2f4e9;
-}
-footer img{
-  width: 30px;
-  /*padding: 7.5px 12px 0 0*/
 }
