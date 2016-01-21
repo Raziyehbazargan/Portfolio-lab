@@ -8,19 +8,19 @@ function Experience (opts) {
 }
 
 Experience.all=[];
-
-Experience.prototype.toHtml = function() {
-  var htmlScript = $('#projectDate').html();
-  var handlebarsScript = Handlebars.compile(htmlScript);
-  var content = {
-    'project': this.project,
-    'institute': this.institute,
-    'date': this.date,
-    'description': this.description,
-  };
-  var compileHtml = handlebarsScript(content);
-  return compileHtml;
-};
+//
+// Experience.prototype.toHtml = function() {
+//   // var htmlScript = $('#projectDate').html();
+//   // var handlebarsScript = Handlebars.compile(htmlScript);
+//   // var content = {
+//   //   'project': this.project,
+//   //   'institute': this.institute,
+//   //   'date': this.date,
+//   //   'description': this.description,
+//   // };
+//   // var compileHtml = handlebarsScript(content);
+//   // return compileHtml;
+// };
 
 Experience.loadAll = function(rawData) {
   rawData.forEach(function(ele) {
@@ -72,5 +72,5 @@ Experience.fetchAll = function() {
 
 $(function(){
   // Experience.tabPage();
-  Experience.fetchAll();
+  // Experience.fetchAll();
 });
