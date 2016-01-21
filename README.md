@@ -8,3 +8,4 @@
 - define  base and style  css file for styling but it didn't finish yet.
 - use Handlebars library to show data of projects on page easily
 - use singlePage (page.js) library
+- use ajax call to give projects list from gitHub for that : first add a js file to save the token and then use $.ajax()
