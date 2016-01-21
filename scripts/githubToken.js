@@ -1,1 +1,0 @@
-var GITHUB_TOKEN = '63e7f0eaa898e8ae6f7df37e4b7e6f6fb9164de8';
