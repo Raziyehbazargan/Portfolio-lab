@@ -13,7 +13,7 @@
 
 
     <!-- using handelbars library  and put the place holders like {{date}}-->
-    <script id="projectDate" type="text/x-handlebars-template">
+    <!-- <script id="projectDate" type="text/x-handlebars-template">
      <section id="articles-template">
       <article class="template" data-category="cat">
         <h5><b>{{project}}</b></h5>
@@ -21,7 +21,7 @@
         <p>{{description}}</p>
       </article>
      </section>
-   </script>
+   </script> -->
 
   </head>
   <body>
@@ -51,6 +51,7 @@
         <section class="box" id="portfolio">
           <h2>Projects in Course 201</h2>
           <p id="description"></p>
+          <ul></ul>
         </section>
         <section class="box" id="resume">
           <h2>Resume</h2>
@@ -62,17 +63,19 @@
       <footer>
       </footer>
     </main>
-    <script src="scripts/githubToken.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="data/data.json"></script>
     <script src="vendor/scripts/page.js"></script>
     <script src="scripts/articles.js"></script>
     <script src="scripts/articleView.js"></script>
+    <script src="scripts/githubToken.js"></script>
     <script src="scripts/indexController.js"></script>
     <script src="scripts/portfolioController.js"></script>
     <script src="scripts/resumeController.js"></script>
     <script src="scripts/contactController.js"></script>
+    <script src="scripts/repoAjax.js"></script>
+    <script src="scripts/repoAjaxView.js"></script>
     <script src="scripts/routes.js"></script>
   </body>
 </html>
