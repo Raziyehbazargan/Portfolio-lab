@@ -4,12 +4,8 @@
   margin: 0;
   padding: 0;
   background-color: white;
-}
-
-#tab-text  {
-  padding: 30px;
   border: solid 20px #d2f4e9;
- }
+}
 
 #tab-text  h2 {
   font-weight: 400;
@@ -22,12 +18,18 @@
    margin-bottom: 5%;
  }
 
-img {
-  float: left;
-  margin-right: 2%;
-  max-width: 100%;  // responsive image base on parent size
-}
-
 .box{
   background: white;
+}
+img#bg-cover {
+  width: 100%;
+  height: 10%;
+}
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
 }

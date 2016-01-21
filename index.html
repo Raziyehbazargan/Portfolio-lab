@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="vendor/style/normalize.css" />
     <link rel="stylesheet" href="style/layout.css" />
     <link rel="stylesheet" href="style/modules.css" />
-
-
     <!-- using handelbars library  and put the place holders like {{date}}-->
     <!-- <script id="projectDate" type="text/x-handlebars-template">
      <section id="articles-template">
@@ -25,10 +23,6 @@
 
   </head>
   <body>
-    <header class="container">
-        <h1>Raziyeh Bazargan</h1>
-        <h4>Front End web developer</h4>
-    </header>
     <nav class="main-nav">
       <ul>
         <!-- for use single page we should use a href and for example /portfolio -->
@@ -38,6 +32,13 @@
         <li class="tab" data-content="contact"><a href='/contact'>Contact</a></li>
       </ul>
     </nav>
+    <header>
+      <img id="bg-cover" src="img/header_img_black.jpeg" alt="" />
+      <h1>Raziyeh Bazargan</h1>
+      <h4>Front End web developer</h4>
+    </header>
+
+    <body>
     <main class="container">
       <article id="tab-text">
         <section class="box" id="aboutMe">
@@ -63,6 +64,7 @@
       <footer>
       </footer>
     </main>
+  </body>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="data/data.json"></script>
@@ -77,5 +79,6 @@
     <script src="scripts/repoAjax.js"></script>
     <script src="scripts/repoAjaxView.js"></script>
     <script src="scripts/routes.js"></script>
+    <script src="scripts/navbar.js"></script>
   </body>
 </html>
