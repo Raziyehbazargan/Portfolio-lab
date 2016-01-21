@@ -37,8 +37,9 @@ nav ul li {
   border-bottom: solid 5px khaki;
   padding: 5px 20px;
   margin-bottom: 4px;
-  color: #fff;
+  /*color: #fff;*/
   cursor: pointer;
+  font-family: 'Courgette', cursive;
 }
 nav ul li a {
   color:black;
